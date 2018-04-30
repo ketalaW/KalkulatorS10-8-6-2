@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="479.0" prefWidth="412.0" styleClass="pane" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.kalkulator.FXMLController">
+<AnchorPane id="AnchorPane" fx:id="fh" prefHeight="479.0" prefWidth="412.0" styleClass="pane" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.kalkulator.FXMLController">
     <children>
       <VBox layoutX="33.0" layoutY="162.0" prefHeight="204.0" prefWidth="78.0" spacing="10.0" stylesheets="@../styles/Styles.css">
          <children>
-            <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="7">
+            <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#clickButton7" prefHeight="20.0" prefWidth="20.0" text="7">
                <font>
                   <Font size="18.0" />
                </font>
@@ -25,7 +25,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="60.0" text="6" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButton6" prefHeight="44.0" prefWidth="60.0" text="6" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -34,7 +34,7 @@
                   <URL value="@../styles/Styles.css" />
                </stylesheets>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="60.0" text="3" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButton3" prefHeight="44.0" prefWidth="60.0" text="3" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -43,7 +43,7 @@
                   <URL value="@../styles/Styles.css" />
                </stylesheets>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="60.0" text="0" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButton0" prefHeight="44.0" prefWidth="60.0" text="0" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -62,7 +62,7 @@
             <Insets bottom="20.0" />
          </padding>
          <children>
-            <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="60.0" text="9">
+            <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#clickButton9" prefHeight="44.0" prefWidth="60.0" text="9">
                <font>
                   <Font size="18.0" />
                </font>
@@ -74,7 +74,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="60.0" text="4" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButton4" prefHeight="44.0" prefWidth="60.0" text="4" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -83,7 +83,7 @@
                   <URL value="@../styles/Styles.css" />
                </stylesheets>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="10.0" text="1" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButton1" prefHeight="22.0" prefWidth="10.0" text="1" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -92,7 +92,7 @@
                   <URL value="@../styles/Styles.css" />
                </stylesheets>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="73.0" text="-" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButtonSub" prefHeight="60.0" prefWidth="73.0" text="-" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -108,7 +108,7 @@
             <Insets bottom="20.0" />
          </padding>
          <children>
-            <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="60.0" text="8">
+            <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#clickButton8" prefHeight="44.0" prefWidth="60.0" text="8">
                <font>
                   <Font size="18.0" />
                </font>
@@ -120,7 +120,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="60.0" text="5" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButton5" prefHeight="44.0" prefWidth="60.0" text="5" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -129,7 +129,7 @@
                   <URL value="@../styles/Styles.css" />
                </stylesheets>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="60.0" text="2" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButton2" prefHeight="44.0" prefWidth="60.0" text="2" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -138,7 +138,7 @@
                   <URL value="@../styles/Styles.css" />
                </stylesheets>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="73.0" text="," textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButtonComma" prefHeight="60.0" prefWidth="73.0" text="," textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -149,13 +149,13 @@
             </Button>
          </children>
       </VBox>
-      <TextField layoutX="37.0" layoutY="103.0" prefHeight="25.0" prefWidth="238.0" />
+      <TextField fx:id="fi" alignment="CENTER_RIGHT" layoutX="37.0" layoutY="103.0" onAction="#clickButtonSub" prefHeight="25.0" prefWidth="238.0" />
       <VBox layoutX="310.0" layoutY="162.0" prefHeight="197.0" prefWidth="78.0" spacing="10.0" stylesheets="@../styles/Styles.css">
          <padding>
             <Insets bottom="20.0" />
          </padding>
          <children>
-            <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="60.0" prefWidth="73.0" text="+">
+            <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#clickButtonAdd" prefHeight="60.0" prefWidth="73.0" text="+">
                <font>
                   <Font size="18.0" />
                </font>
@@ -167,7 +167,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="73.0" text="/" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButtonDiv" prefHeight="60.0" prefWidth="73.0" text="/" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -176,7 +176,7 @@
                   <URL value="@../styles/Styles.css" />
                </stylesheets>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="73.0" text="*" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButtonMulti" prefHeight="60.0" prefWidth="73.0" text="*" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -185,7 +185,7 @@
                   <URL value="@../styles/Styles.css" />
                </stylesheets>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="73.0" text="=" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#clickButtonEgual" prefHeight="60.0" prefWidth="73.0" text="=" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
