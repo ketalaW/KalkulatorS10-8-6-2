@@ -4,14 +4,15 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="fh" prefHeight="479.0" prefWidth="412.0" styleClass="pane" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.kalkulator.FXMLController">
+<AnchorPane id="AnchorPane" fx:id="fh" prefHeight="442.0" prefWidth="413.0" styleClass="pane" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.kalkulator.FXMLController">
     <children>
-      <VBox layoutX="33.0" layoutY="162.0" prefHeight="204.0" prefWidth="78.0" spacing="10.0" stylesheets="@../styles/Styles.css">
+      <VBox layoutX="33.0" layoutY="143.0" prefHeight="204.0" prefWidth="78.0" spacing="10.0" stylesheets="@../styles/Styles.css">
          <children>
             <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#clickButton7" prefHeight="20.0" prefWidth="20.0" text="7">
                <font>
@@ -57,7 +58,7 @@
             <Insets bottom="20.0" />
          </padding>
       </VBox>
-      <VBox layoutX="217.0" layoutY="162.0" prefHeight="211.0" prefWidth="78.0" spacing="10.0" stylesheets="@../styles/Styles.css">
+      <VBox layoutX="226.0" layoutY="143.0" prefHeight="211.0" prefWidth="78.0" spacing="10.0" stylesheets="@../styles/Styles.css">
          <padding>
             <Insets bottom="20.0" />
          </padding>
@@ -103,7 +104,7 @@
             </Button>
          </children>
       </VBox>
-      <VBox layoutX="126.0" layoutY="162.0" prefHeight="197.0" prefWidth="78.0" spacing="10.0" stylesheets="@../styles/Styles.css">
+      <VBox layoutX="128.0" layoutY="143.0" prefHeight="197.0" prefWidth="78.0" spacing="10.0" stylesheets="@../styles/Styles.css">
          <padding>
             <Insets bottom="20.0" />
          </padding>
@@ -149,8 +150,8 @@
             </Button>
          </children>
       </VBox>
-      <TextField fx:id="fi" alignment="CENTER_RIGHT" layoutX="37.0" layoutY="103.0" onAction="#clickButtonSub" prefHeight="25.0" prefWidth="238.0" />
-      <VBox layoutX="310.0" layoutY="162.0" prefHeight="197.0" prefWidth="78.0" spacing="10.0" stylesheets="@../styles/Styles.css">
+      <TextField fx:id="fi" alignment="CENTER_RIGHT" editable="false" layoutX="33.0" layoutY="38.0" onAction="#clickButtonSub" prefHeight="25.0" prefWidth="238.0" />
+      <VBox layoutX="311.0" layoutY="143.0" prefHeight="197.0" prefWidth="78.0" spacing="10.0" stylesheets="@../styles/Styles.css">
          <padding>
             <Insets bottom="20.0" />
          </padding>
@@ -194,6 +195,56 @@
                   <URL value="@../styles/Styles.css" />
                </stylesheets>
             </Button>
+         </children>
+      </VBox>
+      <Button alignment="BOTTOM_LEFT" layoutX="313.0" layoutY="33.0" mnemonicParsing="false" onAction="#clickButtonC" prefHeight="60.0" prefWidth="73.0" text="C">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../styles/Styles.css" />
+            <URL value="@../styles/Styles.css" />
+         </stylesheets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <VBox layoutX="159.0" layoutY="75.0" maxWidth="1.7976931348623157E308" prefHeight="60.0" prefWidth="145.0">
+         <children>
+            <Label id="labelWynik1" fx:id="labelWynik1" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="181.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label id="labelWynik2" fx:id="labelWynik2" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="173.0" text="0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label id="labelWynik3" fx:id="labelWynik3" alignment="CENTER" prefHeight="20.0" prefWidth="182.0" text="0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="41.0" layoutY="75.0" maxWidth="1.7976931348623157E308" prefHeight="68.0" prefWidth="100.0">
+         <children>
+            <Label id="labelWynik1" fx:id="labelWynik11" alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Binary number:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label id="labelWynik2" fx:id="labelWynik21" text="Senary number:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label id="labelWynik3" fx:id="labelWynik31" text="Octal Number:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </VBox>
     </children>
