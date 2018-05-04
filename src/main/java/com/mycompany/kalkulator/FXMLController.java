@@ -12,9 +12,9 @@ import javafx.scene.control.TextField;
 public class FXMLController implements Initializable {
 
     @FXML
-    private TextField fi;
+    private TextField fi ;
     Button button = new Button();
-    private double num1, num2;
+    private double num1 , num2;
     private String sign;
 
     @FXML
@@ -69,8 +69,8 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void clickButtonComma(ActionEvent event) {
-        if (checkCanAddComma() == true) {
-            setText(",");
+        if (checkCanAddComma()) {
+            setText(".");
         }
     }
 
@@ -111,28 +111,46 @@ public class FXMLController implements Initializable {
     if("+".equals(sign)){
     fi.setText(String.valueOf(num1+num2));
     }
-     if("*".equals(sign)){
+    if("*".equals(sign)){
     fi.setText(String.valueOf(num1*num2));
     }
-      if("/".equals(sign)){
-    fi.setText(String.valueOf(num1/num2));
+     if("/".equals(sign)){
+         if(checkCanDiv()){
+              fi.setText(String.valueOf(num1/num2));
+         }
     }
     num1=Double.parseDouble(fi.getText());
     num2 =0;
     }
     private void operation(String _sign) {
-        num1 = Double.parseDouble(fi.getText());
+        SetZeroIfIsEmpty();
+       
+        num1 = Double.valueOf(fi.getText());
         sign = _sign;
         fi.clear();
-
     }
 
+    private void SetZeroIfIsEmpty(){
+     if (fi.getText().isEmpty()){
+        setText("0");
+     }
+    }
+    
+    
     private Boolean checkCanAddComma() {
-        if (fi.getText().isEmpty() || fi.getText().indexOf(",") != -1) {
+        if (fi.getText().isEmpty() || fi.getText().indexOf(".") != -1) {
             return false;
         }
         return true;
     }
+    
+     private Boolean checkCanDiv() {
+        if ("0".equals(fi.getText())) {
+            return false;
+        }
+        return true;
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
